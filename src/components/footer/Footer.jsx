@@ -38,7 +38,7 @@ const footer = () => {
             </div>
         </div>
         <hr />
-        <p className='footer-copy-right'>Copyright 2024 @ Tomato.com - All right reserved</p>
+        <p className='footer-copy-right' style={{textAlign:"center"}}>Copyright 2024 @ Tomato.com - All right reserved</p>
       
 
     </div>
