@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/home/Home";
+import Home from "./pages/home/Home.jsx";
 import Cart from "./pages/cart/Cart";
 import PlaceOrder from "./pages/placeOrder/PlaceOrder";
-import  Footer from "./components/footer/Footer.jsx";
+import Footer from "./components/footer/Footer.jsx";
 import LoginPopup from "./components/loginPopup/LoginPopup.jsx";
 
 const App = () => {
-  const [showLogin,setShowLogin]=useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   return (
     <>
-    {showLogin ? <LoginPopup setShowLogin={setShowLogin}/>:<></>}
+      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
       <div className="app">
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/order" element={<PlaceOrder />} />
         </Routes>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
